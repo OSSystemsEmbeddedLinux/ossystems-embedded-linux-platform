@@ -16,5 +16,6 @@
 
   <!-- conf -->
   <project name="ossystems-yocto-platform" path="sources/conf/repo" remote="code" revision="master"/>
+  <project name="ossystems-yocto-config" path="sources/conf/tools" remote="code" revision="master"/>
 
 </manifest>
