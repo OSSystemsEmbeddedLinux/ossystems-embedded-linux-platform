@@ -7,8 +7,8 @@
 
   <default remote="code" revision="master" sync-j="4"/>
 
-  <project remote="yocto" revision="danny" name="poky" path="sources/poky"/>
-  <project remote="oe"    revision="danny" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="yocto" revision="dylan" name="poky" path="sources/poky"/>
+  <project remote="oe"    revision="dylan" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <project name="ossystems-yocto-base-scripts" path="sources/base" remote="code">
     <copyfile dest="setup-environment" src="setup-environment"/>
