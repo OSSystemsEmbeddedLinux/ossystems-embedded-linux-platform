@@ -21,7 +21,7 @@
   <project remote="fslc" revision="master" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
   <!-- O.S. Systems -->
-  <project remote="code" name="meta-ossystems" path="source/meta-ossystems"/>
+  <project remote="code" name="meta-ossystems" path="sources/meta-ossystems"/>
 
   <!-- conf -->
   <project name="ossystems-yocto-platform" path="sources/conf/repo" remote="code" revision="master"/>
