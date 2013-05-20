@@ -20,6 +20,9 @@
   <project remote="fslc" revision="master" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
   <project remote="fslc" revision="master" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
+  <!-- O.S. Systems -->
+  <project remote="code" name="meta-ossystems" path="source/meta-ossystems"/>
+
   <!-- conf -->
   <project name="ossystems-yocto-platform" path="sources/conf/repo" remote="code" revision="master"/>
   <project name="ossystems-yocto-config" path="sources/conf/tools" remote="code" revision="master"/>
