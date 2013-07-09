@@ -19,8 +19,8 @@
   <project remote="code" revision="master" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
   <project remote="code" name="meta-ossystems" path="sources/meta-ossystems"/>
   <project remote="code" revision="dylan" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-  <project remote="code" revision="master" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="code" revision="master" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="code" revision="dylan" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="code" revision="dylan" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
   <!-- conf -->
   <project name="ossystems-yocto-platform" path="sources/conf/repo" remote="code" revision="master"/>
