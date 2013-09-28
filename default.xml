@@ -6,24 +6,24 @@
   <remote fetch="git://github.com/Freescale" name="fslc"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
 
-  <default remote="code" revision="master" sync-j="4"/>
+  <default sync-j="4"/>
 
-  <project remote="yocto" revision="dylan" name="poky" path="sources/poky"/>
-  <project remote="oe"    revision="dylan" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="yocto" revision="dora" name="poky" path="sources/poky"/>
+  <project remote="oe"    revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
 
-  <project name="ossystems-yocto-base-scripts" path="sources/base" remote="code">
+  <project remote="code"  revision="dora" name="ossystems-yocto-base-scripts" path="sources/base">
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
   <!-- O.S. Systems Yocto BSP -->
-  <project remote="code" revision="master" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
-  <project remote="code" name="meta-ossystems" path="sources/meta-ossystems"/>
-  <project remote="code" revision="dylan" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-  <project remote="code" revision="dylan" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="code" revision="dylan" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+  <project remote="code" revision="dora" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
+  <project remote="code" revision="dora" name="meta-ossystems" path="sources/meta-ossystems"/>
+  <project remote="code" revision="dora" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
+  <project remote="code" revision="dora" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
+  <project remote="code" revision="dora" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
 
   <!-- conf -->
-  <project name="ossystems-yocto-platform" path="sources/conf/repo" remote="code" revision="master"/>
-  <project name="ossystems-yocto-config" path="sources/conf/tools" remote="code" revision="master"/>
+  <project remote="code" revision="dora" name="ossystems-yocto-platform" path="sources/conf/repo"/>
+  <project remote="code" revision="dora" name="ossystems-yocto-config" path="sources/conf/tools"/>
 
 </manifest>
