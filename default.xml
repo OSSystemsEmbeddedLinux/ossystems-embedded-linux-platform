@@ -19,9 +19,11 @@
   <!-- O.S. Systems Yocto BSP -->
   <project remote="ossystems" revision="master" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
   <project remote="ossystems" revision="master" name="meta-ossystems" path="sources/meta-ossystems"/>
-  <project remote="ossystems" revision="master" name="meta-fsl-arm" path="sources/meta-fsl-arm"/>
-  <project remote="ossystems" revision="master" name="meta-fsl-arm-extra" path="sources/meta-fsl-arm-extra"/>
-  <project remote="ossystems" revision="master" name="meta-fsl-demos" path="sources/meta-fsl-demos"/>
+
+  <!-- Freescale BSP components -->
+  <project remote="ossystems" revision="master" name="meta-freescale" path="sources/meta-freescale"/>
+  <project remote="ossystems" revision="master" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="ossystems" revision="master" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
 
   <!-- conf -->
   <project remote="ossystems" revision="master" name="ossystems-yocto-platform" path="sources/conf/repo"/>
