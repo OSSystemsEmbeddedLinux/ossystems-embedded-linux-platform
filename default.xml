@@ -29,4 +29,6 @@
   <project remote="ossystems" revision="master" name="ossystems-yocto-platform" path="sources/conf/repo"/>
   <project remote="ossystems" revision="master" name="ossystems-yocto-config" path="sources/conf/tools"/>
 
+  <!-- ye -->
+  <project name="apps/ye" path="sources/ye" remote="ossystems" revision="master"/>
 </manifest>
