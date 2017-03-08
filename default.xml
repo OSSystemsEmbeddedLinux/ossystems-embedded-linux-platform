@@ -28,4 +28,7 @@
   <!-- conf -->
   <project remote="ossystems" revision="morty" name="ossystems-yocto-platform" path="sources/conf/repo"/>
   <project remote="ossystems" revision="morty" name="ossystems-yocto-config" path="sources/conf/tools"/>
+
+  <!-- ye -->
+  <project name="apps/ye" path="sources/ye" remote="ossystems" revision="morty"/>
 </manifest>
