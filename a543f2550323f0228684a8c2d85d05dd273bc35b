@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "ba7be1f8_8f0e5633",
+        "filename": "default.xml",
+        "patchSetId": 1
+      },
+      "lineNbr": 12,
+      "author": {
+        "id": 1000001
+      },
+      "writtenOn": "2017-05-22T14:01:17Z",
+      "side": 1,
+      "message": "Wrong.",
+      "revId": "a543f2550323f0228684a8c2d85d05dd273bc35b",
+      "serverId": "57f9965e-cfb2-4db6-8589-8b17f788c97f",
+      "unresolved": false
+    }
+  ]
+}
