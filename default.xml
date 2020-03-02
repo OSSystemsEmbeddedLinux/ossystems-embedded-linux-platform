@@ -8,17 +8,16 @@
 
   <default revision="invalidRevision" sync-j="4"/>
 
-  <project remote="oe" revision="master" name="openembedded-core" path="sources/openembedded-core" />
-  <project remote="oe" revision="master" name="bitbake" path="sources/bitbake" />
+  <!-- Open Embedded Layers -->
+  <project remote="oe" revision="master" name="bitbake" path="sources/bitbake"/>
+  <project remote="oe" revision="master" name="openembedded-core" path="sources/openembedded-core"/>
   <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
-
-  <project remote="ossystems"  revision="master" name="ossystems-yocto-base-scripts" path="sources/base">
-    <copyfile dest="setup-environment" src="setup-environment"/>
-  </project>
 
   <!-- O.S. Systems Yocto BSP -->
   <project remote="ossystems" revision="master" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
-  <project remote="ossystems" revision="master" name="meta-ossystems" path="sources/meta-ossystems"/>
+  <project remote="ossystems"  revision="master" name="ossystems-yocto-base-scripts" path="sources/base">
+    <copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
 
   <!-- Freescale BSP components -->
   <project remote="ossystems" revision="master" name="meta-freescale" path="sources/meta-freescale"/>
@@ -26,8 +25,7 @@
   <project remote="ossystems" revision="master" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
 
   <!-- conf -->
-  <project remote="ossystems" revision="master" name="ossystems-yocto-platform" path="sources/conf/repo"/>
-  <project remote="ossystems" revision="master" name="ossystems-yocto-config" path="sources/conf/tools"/>
+  <project remote="ossystems" revision="master" name="ossystems-yocto-platform" path="sources/platform"/>
 
   <!-- ye -->
   <project name="apps/ye" path="sources/ye" remote="ossystems" revision="master"/>
