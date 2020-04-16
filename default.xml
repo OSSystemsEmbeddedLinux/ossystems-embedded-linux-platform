@@ -9,23 +9,23 @@
   <default revision="invalidRevision" sync-j="4"/>
 
   <!-- Open Embedded Layers -->
-  <project remote="oe" revision="master" name="bitbake" path="sources/bitbake"/>
-  <project remote="oe" revision="master" name="openembedded-core" path="sources/openembedded-core"/>
-  <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" revision="1.46" name="bitbake" path="sources/bitbake"/>
+  <project remote="oe" revision="dunfell" name="openembedded-core" path="sources/openembedded-core"/>
+  <project remote="oe" revision="dunfell" name="meta-openembedded" path="sources/meta-openembedded"/>
 
   <!-- O.S. Systems Yocto BSP -->
-  <project remote="ossystems" revision="master" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
-  <project remote="ossystems"  revision="master" name="ossystems-yocto-base-scripts" path="sources/base">
+  <project remote="ossystems" revision="dunfell" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
+  <project remote="ossystems"  revision="dunfell" name="ossystems-yocto-base-scripts" path="sources/base">
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
   <!-- Freescale BSP components -->
-  <project remote="ossystems" revision="master" name="meta-freescale" path="sources/meta-freescale"/>
-  <project remote="ossystems" revision="master" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
-  <project remote="ossystems" revision="master" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="ossystems" revision="dunfell" name="meta-freescale" path="sources/meta-freescale"/>
+  <project remote="ossystems" revision="dunfell" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="ossystems" revision="dunfell" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
 
   <!-- conf -->
-  <project remote="ossystems" revision="master" name="ossystems-yocto-platform" path="sources/platform"/>
+  <project remote="ossystems" revision="dunfell" name="ossystems-yocto-platform" path="sources/platform"/>
 
   <!-- ye -->
   <project name="apps/ye" path="sources/ye" remote="ossystems" revision="master"/>
