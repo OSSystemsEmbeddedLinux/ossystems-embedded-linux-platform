@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <remote fetch="http://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
+  <remote fetch="git://github.com" name="github"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote fetch="git://github.com/Freescale" name="fslc"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
 
-  <default revision="invalidRevision" sync-j="4"/>
+  <!-- ### Yocto Project release used as default for all included layers and components ### -->
+  <default revision="master"/>
 
-  <!-- Open Embedded Layers -->
+  <!-- ### O.S. Systems Embedded Linux Core layers ### -->
   <project remote="oe" revision="master" name="bitbake" path="sources/bitbake"/>
-  <project remote="oe" revision="master" name="openembedded-core" path="sources/openembedded-core"/>
-  <project remote="oe" revision="master" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="oe" name="openembedded-core" path="sources/openembedded-core"/>
 
-  <!-- O.S. Systems Yocto BSP -->
-  <project remote="ossystems" revision="master" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
-  <project remote="ossystems"  revision="master" name="ossystems-yocto-base-scripts" path="sources/base">
+  <project remote="github" name="OSSystemsEmbeddedLinux/meta-ossystems-base" path="sources/meta-ossystems-base"/>
+  <project remote="github" name="OSSystemsEmbeddedLinux/ossystems-yocto-base-scripts" path="sources/base">
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
-  <!-- Freescale BSP components -->
-  <project remote="ossystems" revision="master" name="meta-freescale" path="sources/meta-freescale"/>
-  <project remote="ossystems" revision="master" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
-  <project remote="ossystems" revision="master" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="github" revision="master" name="OSSystemsEmbeddedLinux/ye" path="sources/ye"/>
 
-  <!-- conf -->
-  <project remote="ossystems" revision="master" name="ossystems-yocto-platform" path="sources/platform"/>
-
-  <!-- ye -->
-  <project name="apps/ye" path="sources/ye" remote="ossystems" revision="master"/>
+  <!-- ### Project specific configuration ### -->
+  <project remote="github" name="OSSystemsEmbeddedLinux/ossystems-embedded-linux-platform" path="sources/platform"/>
 </manifest>
