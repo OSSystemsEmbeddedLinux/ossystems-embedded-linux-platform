@@ -1,0 +1,78 @@
+#+STARTUP: indent
+#+LANGUAGE: en
+#+TITLE: O.S. Systems Embedded Linux Reference Platform
+#+AUTHOR: O.S. Systems Software
+#+EMAIL: contato@ossystems.com.br
+#+LATEX_CLASS: article
+#+OPTIONS: date:nil
+#+OPTIONS: toc:nil
+
+* Supported boards
+
+The O.S. Systems Embedded Linux Reference Platform is BSP agnostic, having no
+vendor-specific BSPs included. We rely on the OpenEmbedded-Core to provide a set
+of emulated devices, using QEMU, to use as reference.
+
+Check the machines which are included, [[https://git.openembedded.org/openembedded-core/tree/meta/conf/machine?h=dunfell][here]].
+
+* Setup instructions
+
+** Required Packages for the Build Host
+
+The list of packages you need on the host development system can be large when
+covering all build scenarios using the Yocto Project. See [[https://www.yoctoproject.org/docs/3.1/ref-manual/ref-manual.html#detailed-supported-distros][Yocto Project Reference Manual]]
+for details.
+
+** Getting the ~repo~ tool
+
+The first step is to download and prepare all the Yocto Project (YP)
+environment, you need to have the ~repo~ tool installed in your host machine.
+
+For Debian/Ubuntu Linux distro you can install it running:
+
+#+BEGIN_SRC bash
+  sudo apt install repo
+#+END_SRC
+
+If you're using other Linux distro or the ~repo~ tools is not in the repository
+you can download directly from upstream and set your distro as shown below:
+
+#+BEGIN_SRC bash
+  mkdir ~/bin
+  curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+  chmod a+x ~/bin/repo
+  PATH=${PATH}:~/bin
+#+END_SRC
+
+** Download the platform source
+
+The next step is to download the BSP source code, we have a platform to fetch
+all files that is necessary to build the project.
+
+To download all sources run the following commands:
+#+BEGIN_SRC bash
+  mkdir oel-platform
+  cd oel-platform
+  repo init -u https://github.com/OSSystemsEmbeddedLinux/ossystems-embedded-linux-platform.git -b master
+  repo sync
+#+END_SRC
+
+At the end of the commands, you have every metadata you need to start work with.
+
+** Preparing the environment
+
+Before starting to work you need to load the YP variables to run bitbake
+command:
+
+#+BEGIN_SRC bash
+  source setup-environment build
+#+END_SRC
+
+Note that you need to run the command above for all new terminal, the loaded
+variables are only visible to the terminal that you source the ~setup-environment~
+script.
+
+* References
+- [[https://github.com/CollaborativeWritersHub/heading-for-the-yocto-project/releases/download/18.10.0/Heading-for-the-Yocto-Project.pdf][Heading for the Yocto Project]]
+- [[https://www.amazon.com/dp/B0751HKPB4][Embedded Linux Development using Yocto Projects - Second Edition]]
+- [[https://www.yoctoproject.org/docs/3.1/ref-manual/ref-manual.html#detailed-supported-distros][Yocto Project Reference Manual]]
