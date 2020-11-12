@@ -53,7 +53,7 @@ To download all sources run the following commands:
 #+BEGIN_SRC bash
   mkdir oel-platform
   cd oel-platform
-  repo init -u https://github.com/OSSystemsEmbeddedLinux/ossystems-embedded-linux-platform.git -b master
+  repo init -u https://github.com/OSSystemsEmbeddedLinux/ossystems-embedded-linux-platform.git -b gatesgarth
   repo sync
 #+END_SRC
 
