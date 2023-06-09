@@ -1,34 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <remote fetch="http://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
+  <remote fetch="ssh://git@github.com" name="github" protocol="git"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="fslc"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
 
-  <default revision="invalidRevision" sync-j="4"/>
+  <default revision="warrior" sync-j="4"/>
 
-  <project remote="oe" revision="warrior" name="openembedded-core" path="sources/openembedded-core" />
-  <project remote="oe" revision="1.42" name="bitbake" path="sources/bitbake" />
-  <project remote="oe" revision="warrior" name="meta-openembedded" path="sources/meta-openembedded"/>
-
-  <project remote="ossystems"  revision="warrior" name="ossystems-yocto-base-scripts" path="sources/base">
-    <copyfile dest="setup-environment" src="setup-environment"/>
-  </project>
-
-  <!-- O.S. Systems Yocto BSP -->
-  <project remote="ossystems" revision="warrior" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
-  <project remote="ossystems" revision="warrior" name="meta-ossystems" path="sources/meta-ossystems"/>
-
-  <!-- Freescale BSP components -->
-  <project remote="ossystems" revision="warrior" name="meta-freescale" path="sources/meta-freescale"/>
-  <project remote="ossystems" revision="warrior" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
-  <project remote="ossystems" revision="warrior" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
-
-  <!-- conf -->
-  <project remote="ossystems" revision="warrior" name="ossystems-yocto-platform" path="sources/conf/repo"/>
-  <project remote="ossystems" revision="warrior" name="ossystems-yocto-config" path="sources/conf/tools"/>
-
-  <!-- ye -->
-  <project name="apps/ye" path="sources/ye" remote="ossystems" revision="master"/>
+  <project name="Freescale/meta-freescale" path="sources/meta-freescale" remote="github" revision="930545b1ac6926dd70f61c0ef990b79acdfb06c2" upstream="warrior" dest-branch="warrior"/>
+  <project name="ShellHub-io/meta-shellhub" path="sources/meta-shellhub" remote="github" revision="94291bac459d3ebe64bbf728102c2320bf78cbcb"/>
+  <project name="UpdateHub/meta-updatehub" path="sources/meta-updatehub" remote="github" revision="24a1b5fac3d543fb9e9f26824734b11b25fe8f9f" upstream="warrior" dest-branch="warrior"/>
+  <project name="bitbake" path="sources/bitbake" remote="oe" revision="af479e239d1e4dc93f0162c5936369a94c1c529d" upstream="1.42" dest-branch="1.42"/>
+  <project remote="github" revision="master" name="OSSystemsEmbeddedLinux/ye" path="sources/ye"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="oe" revision="a24acf94d48d635eca668ea34598c6e5c857e3f8" upstream="warrior" dest-branch="warrior"/>
+  <project name="meta-ossystems" path="sources/meta-ossystems" remote="ossystems" revision="2e67754ec11fce743892ecddf3a31b0b589008ab" upstream="warrior" dest-branch="warrior"/>
+  <project name="meta-ossystems-base" path="sources/meta-ossystems-base" remote="ossystems" revision="3672adb2f95c72bfe47ab48b4bd43558d527dbd9" upstream="warrior" dest-branch="warrior"/>
+  <project name="meta-ossystems-extras" path="sources/meta-ossystems-extras" remote="ossystems" revision="f68d0fa4cb1a1be6d3022429e9650224d00ea5d0" upstream="warrior" dest-branch="warrior"/>
+  <project name="openembedded-core" path="sources/openembedded-core" remote="oe" revision="856674d6f75e2b99ae961d5ab869ff071ff5c362" upstream="warrior" dest-branch="warrior"/>
+  <project name="ossystems-yocto-base-scripts" path="sources/base" remote="ossystems" revision="8d5daf9633a53a1e5171302d7122d71fc76a87a8" upstream="warrior" dest-branch="warrior">
+    <copyfile src="setup-environment" dest="setup-environment"/>
 </manifest>
