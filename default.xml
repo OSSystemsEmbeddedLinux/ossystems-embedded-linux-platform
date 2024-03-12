@@ -5,7 +5,7 @@
   <remote fetch="git://git.openembedded.org" name="oe"/>
 
   <!-- ### Yocto Project release used as default for all included layers and components ### -->
-  <default revision="master"/>
+  <default revision="nanbield"/>
 
   <!-- ### O.S. Systems Embedded Linux Core layers ### -->
   <project remote="oe" revision="master" name="bitbake" path="sources/bitbake"/>

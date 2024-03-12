@@ -32,7 +32,7 @@ Each element describes a single Git repository to be cloned into the repo client
 
 ### Element default
 
-Its remote and revision attributes are used as default when a project element does not specify its own remote or revision attribute. In the example above, the default revision is `kirkstone`, so all projects which doesn't specify a revision will be fetched from **kirkstone** revision.
+Its remote and revision attributes are used as default when a project element does not specify its own remote or revision attribute. In the example above, the default revision is `nanbield`, so all projects which doesn't specify a revision will be fetched from **nanbield** revision.
 
 ### Element copyfile
 
@@ -55,7 +55,7 @@ Now we'll add the element `project`:
 <project remote="github" revision="master" name="MyOrganization/meta-example" path="sources/meta-example"/>
 ```
 
-So we'll add a remote called `github`, that we declared on `remote` element. The revision will be set to `master`, as the default revision of the manifest is `kirkstone`. The path to the organization and repository is `MyOrganization/meta-example`. Finally, the path destination is `source/meta-example`, where the `meta-example` will be cloned.
+So we'll add a remote called `github`, that we declared on `remote` element. The revision will be set to `master`, as the default revision of the manifest is `nanbield`. The path to the organization and repository is `MyOrganization/meta-example`. Finally, the path destination is `source/meta-example`, where the `meta-example` will be cloned.
 So, when Repo parse it, it will clone from `https://github.com/MyOrganization/meta-example` into `source/meta-example` directory.
 
 ### Adding a layer to setup-environment
