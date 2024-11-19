@@ -91,7 +91,7 @@ To download all sources, run the following commands:
 ```sh
 mkdir ossystems-embedded-linux-platform
 cd ossystems-embedded-linux-platform
-repo init -u git@github.com:OSSystemsEmbeddedLinux/ossystems-embedded-linux-platform.git -b scarthgap
+repo init -u git@github.com:OSSystemsEmbeddedLinux/ossystems-embedded-linux-platform.git -b master
 repo sync
 ```
 
