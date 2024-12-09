@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote fetch="http://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
+  <remote fetch="https://code.ossystems.io" name="ossystems" review="code.ossystems.io"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="git://github.com/Freescale" name="fslc"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
