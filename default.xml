@@ -3,6 +3,7 @@
 
   <remote fetch="https://code.ossystems.io" name="ossystems" review="code.ossystems.io"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  <remote fetch="https://github.com/Freescale" name="fslc"/>
   <remote fetch="git://git.openembedded.org" name="oe"/>
 
   <default revision="invalidRevision" sync-j="4"/>
@@ -20,9 +21,9 @@
   <project remote="ossystems" revision="zeus" name="meta-ossystems" path="sources/meta-ossystems"/>
 
   <!-- Freescale BSP components -->
-  <project remote="ossystems" revision="zeus" name="meta-freescale" path="sources/meta-freescale"/>
-  <project remote="ossystems" revision="zeus" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
-  <project remote="ossystems" revision="zeus" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="fslc" revision="zeus" name="meta-freescale" path="sources/meta-freescale"/>
+  <project remote="fslc" revision="zeus" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="fslc" revision="zeus" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
 
   <!-- conf -->
   <project remote="ossystems" revision="zeus" name="ossystems-yocto-platform" path="sources/conf/repo"/>
