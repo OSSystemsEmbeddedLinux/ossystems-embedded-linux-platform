@@ -1,34 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote fetch="http://code.ossystems.com.br" name="ossystems" review="code.ossystems.com.br"/>
-  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
-  <remote fetch="git://github.com/Freescale" name="fslc"/>
-  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="ssh://git@github.com" name="github"/>
+  <remote fetch="ssh://code.ossystems.io:29418" name="ossystems"/>
 
-  <default revision="invalidRevision" sync-j="4"/>
+  <default revision="rocko" sync-j="4"/>
 
-  <project remote="oe" revision="rocko" name="openembedded-core" path="sources/openembedded-core" />
-  <project remote="oe" revision="1.36" name="bitbake" path="sources/bitbake" />
-  <project remote="oe" revision="rocko" name="meta-openembedded" path="sources/meta-openembedded"/>
+  <project remote="github" name="openembedded/openembedded-core" path="sources/openembedded-core"/>
+  <project remote="github" revision="1.36" name="openembedded/bitbake" path="sources/bitbake"/>
+  <project remote="github" name="openembedded/meta-openembedded" path="sources/meta-openembedded"/>
 
-  <project remote="ossystems"  revision="rocko" name="ossystems-yocto-base-scripts" path="sources/base">
+  <project remote="github" name="OSSystemsEmbeddedLinux/ossystems-yocto-base-scripts" path="sources/base">
     <copyfile dest="setup-environment" src="setup-environment"/>
   </project>
 
   <!-- O.S. Systems Yocto BSP -->
-  <project remote="ossystems" revision="rocko" name="meta-ossystems-base" path="sources/meta-ossystems-base"/>
-  <project remote="ossystems" revision="rocko" name="meta-ossystems" path="sources/meta-ossystems"/>
+  <project remote="github" name="OSSystemsEmbeddedLinux/meta-ossystems-base" path="sources/meta-ossystems-base"/>
+  <project remote="ossystems" name="meta-ossystems" path="sources/meta-ossystems"/>
 
   <!-- Freescale BSP components -->
-  <project remote="ossystems" revision="rocko" name="meta-freescale" path="sources/meta-freescale"/>
-  <project remote="ossystems" revision="rocko" name="meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
-  <project remote="ossystems" revision="rocko" name="meta-freescale-distro" path="sources/meta-freescale-distro"/>
+  <project remote="github" name="Freescale/meta-freescale" path="sources/meta-freescale"/>
+  <project remote="github" name="Freescale/meta-freescale-3rdparty" path="sources/meta-freescale-3rdparty"/>
+  <project remote="github" name="Freescale/meta-freescale-distro" path="sources/meta-freescale-distro"/>
 
   <!-- conf -->
-  <project remote="ossystems" revision="rocko" name="ossystems-yocto-platform" path="sources/conf/repo"/>
-  <project remote="ossystems" revision="rocko" name="ossystems-yocto-config" path="sources/conf/tools"/>
+  <project remote="ossystems" name="ossystems-yocto-platform" path="sources/conf/repo"/>
+  <project remote="ossystems" name="ossystems-yocto-config" path="sources/conf/tools"/>
 
   <!-- ye -->
-  <project name="apps/ye" path="sources/ye" remote="ossystems" revision="master"/>
+  <project remote="github" revision="master" name="OSSystemsEmbeddedLinux/ye" path="sources/ye"/>
 </manifest>
