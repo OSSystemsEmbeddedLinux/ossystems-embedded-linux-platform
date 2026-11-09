@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote fetch="ssh://git@github.com" name="github"/>
+  <remote fetch="https://github.com" pushurl="ssh://git@github.com" name="github"/>
 
   <!-- ### Yocto Project release used as default for all included layers and components ### -->
   <default revision="master"/>
