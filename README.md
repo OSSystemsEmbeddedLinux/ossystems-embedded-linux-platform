@@ -166,7 +166,7 @@ We strongly recommend read our [Modifying This Platform](modifying-platform.md) 
 
 - [Heading for the Yocto Project](https://github.com/CollaborativeWritersHub/heading-for-the-yocto-project/releases/download/18.10.0/Heading-for-the-Yocto-Project.pdf)
 - [Embedded Linux Development using Yocto Projects - Third Edition](https://www.amazon.com.br/dp/B0BRCTY345/)
-- [Yocto Project Reference Manual](https://www.yoctoproject.org/docs/3.1/ref-manual/ref-manual.html#detailed-supported-distros)
+- [Yocto Project Reference Manual](https://docs.yoctoproject.org/ref-manual/index.html)
 
 ## Get in touch
 
