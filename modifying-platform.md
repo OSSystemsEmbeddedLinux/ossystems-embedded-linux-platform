@@ -9,7 +9,29 @@ Manifests are inherently version controlled, since they are kept within a Git re
 
 This is an example of Repo manifest:
 
-![](sources/platform-readme-manifest.png)
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="ssh://git@github.com" name="github"/>
+
+  <!-- ### Yocto Project release used as default for all included layers and components ### -->
+  <default revision="master"/>
+
+  <!-- ### O.S. Systems Embedded Linux Core layers ### -->
+  <project remote="github" revision="master" name="openembedded/bitbake" path="sources/bitbake"/>
+  <project remote="github" name="openembedded/openembedded-core" path="sources/openembedded-core"/>
+
+  <project remote="github" name="OSSystemsEmbeddedLinux/meta-ossystems-base" path="sources/meta-ossystems-base"/>
+  <project remote="github" name="OSSystemsEmbeddedLinux/ossystems-yocto-base-scripts" path="sources/base">
+    <copyfile dest="setup-environment" src="setup-environment"/>
+  </project>
+
+  <project remote="github" revision="master" name="OSSystemsEmbeddedLinux/ye" path="sources/ye"/>
+
+  <!-- ### Project specific configuration ### -->
+  <project remote="github" name="OSSystemsEmbeddedLinux/ossystems-embedded-linux-platform" path="sources/platform"/>
+</manifest>
+```
 
 As you can see, it's a simple markup file. Basically it defines the remotes which will be pulled by **Repo**, the name of the repositories **(which in Repo syntax it's called  "project")**, the revision and the destiny path. 
 
@@ -32,7 +54,7 @@ Each element describes a single Git repository to be cloned into the repo client
 
 ### Element default
 
-Its remote and revision attributes are used as default when a project element does not specify its own remote or revision attribute. In the example above, the default revision is `kirkstone`, so all projects which doesn't specify a revision will be fetched from **kirkstone** revision.
+Its remote and revision attributes are used as default when a project element does not specify its own remote or revision attribute. In the example above, the default revision is `master`, so all projects which doesn't specify a revision will be fetched from the **master** revision.
 
 ### Element copyfile
 
@@ -44,10 +66,10 @@ Zero or more copyfile elements may be specified as children of a project element
 
 First, you need to add the `remote` element, if it doesn't exist. In this example, we will add a layer from GitHub. So first we need to assure the remote is present on the manifest. If not, add the Github remote:
 ```xml
-<remote fetch="https://github.com" name="github"/>
+<remote fetch="ssh://git@github.com" name="github"/>
 ```
 
-In the snippet above we're adding a ssh remote to a repository through the attribute `fetch`. We'll call this remote `bitbucket` through the attribute `name`.
+In the snippet above we're adding a ssh remote to a repository through the attribute `fetch`. We'll call this remote `github` through the attribute `name`.
 
 Now we'll add the element `project`:
 
@@ -55,8 +77,8 @@ Now we'll add the element `project`:
 <project remote="github" revision="master" name="MyOrganization/meta-example" path="sources/meta-example"/>
 ```
 
-So we'll add a remote called `github`, that we declared on `remote` element. The revision will be set to `master`, as the default revision of the manifest is `kirkstone`. The path to the organization and repository is `MyOrganization/meta-example`. Finally, the path destination is `source/meta-example`, where the `meta-example` will be cloned.
-So, when Repo parse it, it will clone from `https://github.com/MyOrganization/meta-example` into `source/meta-example` directory.
+So we'll add a remote called `github`, that we declared on `remote` element. The revision is set to `master` explicitly; without it, the project would follow the manifest's default revision. The path to the organization and repository is `MyOrganization/meta-example`. Finally, the path destination is `source/meta-example`, where the `meta-example` will be cloned.
+So, when Repo parse it, it will clone from `ssh://git@github.com/MyOrganization/meta-example` into `source/meta-example` directory.
 
 ### Adding a layer to setup-environment
 
