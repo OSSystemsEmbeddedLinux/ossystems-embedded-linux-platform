@@ -15,10 +15,10 @@ This is an example of Repo manifest:
   <remote fetch="ssh://git@github.com" name="github"/>
 
   <!-- ### Yocto Project release used as default for all included layers and components ### -->
-  <default revision="master"/>
+  <default revision="wrynose"/>
 
   <!-- ### O.S. Systems Embedded Linux Core layers ### -->
-  <project remote="github" revision="master" name="openembedded/bitbake" path="sources/bitbake"/>
+  <project remote="github" revision="2.18" name="openembedded/bitbake" path="sources/bitbake"/>
   <project remote="github" name="openembedded/openembedded-core" path="sources/openembedded-core"/>
 
   <project remote="github" name="OSSystemsEmbeddedLinux/meta-ossystems-base" path="sources/meta-ossystems-base"/>
@@ -54,7 +54,7 @@ Each element describes a single Git repository to be cloned into the repo client
 
 ### Element default
 
-Its remote and revision attributes are used as default when a project element does not specify its own remote or revision attribute. In the example above, the default revision is `master`, so all projects which doesn't specify a revision will be fetched from the **master** revision.
+Its remote and revision attributes are used as default when a project element does not specify its own remote or revision attribute. In the example above, the default revision is `wrynose`, so all projects which doesn't specify a revision will be fetched from the **wrynose** revision.
 
 ### Element copyfile
 
